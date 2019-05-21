@@ -1,0 +1,19 @@
+.parent {
+    -fx-background-color: #ddd;
+}
+
+.btnClose {
+    //-fx-background-color: #ccc;
+}
+
+.btnClose:hover {
+    //-fx-background-color: #ddd;
+}
+
+.btnMin {
+    //-fx-background-color: #ccc;
+}
+
+.btnMin:hover{
+    //-fx-background-color: #ddd;
+}

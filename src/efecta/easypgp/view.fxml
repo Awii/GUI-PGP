@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="primaryPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" styleClass="parent" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="efecta.easypgp.Controller">
+    <children>
+      <TabPane layoutX="25.0" layoutY="14.0" prefHeight="333.0" prefWidth="537.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab closable="false" text="Encryption">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                          <Button fx:id="btnEncrypt" focusTraversable="false" layoutX="244.0" layoutY="330.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="80.0" text="Encrypt" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="252.0" />
+                        <TextArea fx:id="encryptMessage" layoutX="14.0" prefHeight="200.0" prefWidth="324.0" promptText="Message to encrypt" wrapText="true" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="368.0" AnchorPane.topAnchor="8.0" />
+                        <TextArea fx:id="publicKey" layoutX="8.0" layoutY="208.0" prefHeight="144.0" prefWidth="236.0" promptText="Public key" wrapText="true" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="216.0" />
+                        <TextArea fx:id="encryptedMessage" layoutX="374.0" layoutY="14.0" prefHeight="353.0" prefWidth="353.0" promptText="Encrypted message" wrapText="true" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0" />
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+          <Tab closable="false" text="Decryption">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnDecrypt" focusTraversable="false" layoutX="244.0" layoutY="330.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="80.0" text="Decrypt" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="252.0" />
+                        <TextArea fx:id="decryptMessage" layoutX="8.0" layoutY="8.0" prefHeight="200.0" prefWidth="324.0" promptText="Message to decrypt" wrapText="true" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="368.0" AnchorPane.topAnchor="8.0" />
+                        <TextArea fx:id="privateKey" layoutX="8.0" layoutY="216.0" prefHeight="102.0" prefWidth="236.0" promptText="Private key" wrapText="true" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="216.0" />
+                        <TextArea fx:id="decryptedMessage" layoutX="374.0" layoutY="14.0" prefHeight="353.0" prefWidth="353.0" promptText="Decrypted message" wrapText="true" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0" />
+                        <PasswordField fx:id="passwordField" layoutX="8.0" layoutY="330.0" prefHeight="33.0" prefWidth="162.0" promptText="Password" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Pane fx:id="topmostPane" layoutX="156.0" prefHeight="33.0" prefWidth="503.0" AnchorPane.leftAnchor="216.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+                <Button fx:id="btnMin" alignment="CENTER" focusTraversable="false" layoutX="436.0" maxHeight="53.0" maxWidth="24.0" minHeight="24.0" minWidth="24.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="69.0" styleClass="btnMin" text="_" textAlignment="CENTER">
+                    <font>
+                        <Font name="Arial" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnClose" alignment="CENTER" focusTraversable="false" layoutX="460.0" maxHeight="24.0" maxWidth="24.0" minHeight="24.0" minWidth="24.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="34.0" styleClass="btnClose" text="X" textAlignment="CENTER">
+                    <font>
+                        <Font name="Arial Bold" size="11.0" />
+                    </font>
+                </Button>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
